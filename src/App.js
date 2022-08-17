@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./App.css";
-import Register from "./RegisterForm/Register";
+import Chat from "./components/chat/Chat.jsx";
+import Auth from "./components/Auth.jsx";
 
+const App = () => {
+  const [isAuth, setIsAuth] = useState(false);
 
-function App() {
   return (
     <div>
-      <Register/>
+      {isAuth ? ( <Chat /> ) : ( <Auth/> )}
     </div>
   );
 }
