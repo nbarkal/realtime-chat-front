@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./chat.css";
 import Message from "./messages/Message";
+import SendMessage from "./messages/SendMessage";
 
 const Chat = () => {
   const [messages, setMessages] = useState(null);
@@ -20,7 +21,8 @@ const Chat = () => {
   return (
     <div className="chat">
       <h1>REALTIME CHAT</h1>
-      <div>{messages && messages.map((message) => <Message message={message} key={message.id}/>)}</div>
+      <div className="chat-wrapper">{messages && messages.map((message) => <Message message={message} key={message.id}/>)}</div>
+      <SendMessage />
     </div>
   );
 };

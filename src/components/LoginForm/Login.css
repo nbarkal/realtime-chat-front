@@ -1,0 +1,131 @@
+.login {
+    background: #dd107d;
+    width: 500px;
+    min-width: 100px;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 500px){
+    .login {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .login {
+        width: 350px;
+    }
+}
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+
+html,
+body {
+    width: 100vw;
+    background-image: url(../RegisterForm/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+body {
+    counter-reset: section;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.logo {
+    border: 10px solid #dd107d;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+}
+
+.container h1,
+.container span {
+    font-family: "Pt Sans", helvetica, sans-serif;
+}
+
+.container h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    font-family: "droid serif";
+    font-style: italic;
+    color: #d3b6ca;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.container form span:before {
+    counter-increment: section;
+    content: counter(section);
+    border: 2px solid #4c2639;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1.6em;
+    font-size: 1.5em;
+    position: relative;
+    left: -22px;
+    top: -11px;
+    background: #2f1e27;
+}
+
+form {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.fields {
+    border-left: 2px solid #4c2639;
+}
+
+.container span {
+    margin-bottom: 22px;
+    display: inline-block;
+}
+
+.container span:last-child {
+    margin-bottom: -11px;
+}
+
+.my-input {
+    border: none;
+    outline: none;
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 14px;
+    right: 9px;
+    border-radius: 22px;
+    width: 220px;
+    box-sizing: border-box;
+    padding: 0 18px;
+}
+
+.my-input[type="button"] {
+    background: rgba(152, 5, 237, 0.474) !important;
+    color: #fff;
+    position: relative;
+    left: 9px;
+    top: 25px;
+    width: 100px;
+    cursor: pointer;
+}
