@@ -3,7 +3,7 @@ import "./chat.css";
 import Message from "./messages/Message";
 import SendMessage from "./messages/SendMessage";
 
-const Chat = () => {
+const Chat = (props) => {
   const [messages, setMessages] = useState(null);
   useEffect(() => {
     fetch("http://192.168.50.130:8000/api/chat-messages", {
@@ -21,8 +21,13 @@ const Chat = () => {
   return (
     <div className="chat">
       <h1>REALTIME CHAT</h1>
-      <div className="chat-wrapper">{messages && messages.map((message) => <Message message={message} key={message.id}/>)}</div>
-      <SendMessage />
+      <div className="chat-wrapper">
+        {messages &&
+          messages.map((message) => (
+            <Message message={message} user={props.user} key={message.id} />
+          ))}
+      </div>
+      <SendMessage  user={props.user}/>
     </div>
   );
 };

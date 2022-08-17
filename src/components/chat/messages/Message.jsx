@@ -2,8 +2,8 @@ import "./message.css";
 
 const Message = (props) => {
   const message = props.message;
-  const userId = 2;
-
+  const userId = props.user.id;
+  
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
