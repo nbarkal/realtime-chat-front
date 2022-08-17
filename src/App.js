@@ -7,7 +7,7 @@ const App = () => {
   const [isAuth, setIsAuth] = useState(false);
 
   return (
-    <div>
+    <div className="body">
       {isAuth ? ( <Chat /> ) : ( <Auth/> )}
     </div>
   );

@@ -3,7 +3,7 @@ import Login from './LoginForm/Login'
 import Register from './RegisterForm/Register'
 
 const Auth = () => {
-    const [currentPage, setCurrentPage] = useState('login')
+    const [currentPage, setCurrentPage] = useState('register')
 
     return (
         <div>
