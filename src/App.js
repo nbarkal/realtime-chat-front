@@ -4,7 +4,7 @@ import Chat from "./components/chat/Chat.jsx";
 import Auth from "./components/Auth.jsx";
 
 const App = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
 
   return (
     <div className="body">
